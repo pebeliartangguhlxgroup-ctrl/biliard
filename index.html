@@ -8,7 +8,7 @@
 <style>
 body { 
     font-family: 'Arial', sans-serif; 
-    background-image: url('https://i.postimg.cc/hPyq0nwG/Screenshot-6.png'); 
+    background-image: url('https://i.postimg.cc/VLK9DZmD/Screenshot-2.jpg'); 
     color: #fff; 
     margin: 0; 
     padding: 20px; 
@@ -27,8 +27,8 @@ h2 {
     margin: 60px auto; 
     padding: 25px; 
     border-radius: 20px; 
-    background: rgba(255,255,255,0.05);
-    box-shadow: 0 0 25px #00eaff;
+    background: rgba(3, 217, 3, 0.05);
+    box-shadow: 0 0 25px #e505c7;
     text-align: center;
 }
 #loginSection input {
@@ -68,7 +68,7 @@ h2 {
 
 /* CONTAINER & SIDE CARDS */
 .container, .side-card { 
-    background: rgba(255,255,255,0.05); 
+    background: rgba(1, 24, 26, 0.4); 
     padding: 22px; 
     border-radius: 20px; 
     box-shadow: 0 0 20px rgba(0,234,255,0.4); 
@@ -161,8 +161,8 @@ th, td { padding: 12px; text-align: center; }
     <input type="text" id="namaInput">
     <label>𝐖𝐈𝐍/𝐋𝐎𝐒𝐄</label>
     <select id="statusInput">
-      <option value="win">WIN</option>
-      <option value="lose">LOSE</option>
+      <option value="win">𝐖𝐈𝐍</option>
+      <option value="lose">𝐋𝐎𝐒𝐄</option>
     </select>
     <label>𝐉𝐔𝐌𝐋𝐀𝐇 𝐁𝐄𝐓</label>
     <select id="betInput">
@@ -172,7 +172,14 @@ th, td { padding: 12px; text-align: center; }
       <option value="10000">10.000</option>
     </select>
     <label>𝐉𝐔𝐌𝐋𝐀𝐇 𝐏𝐄𝐌𝐀𝐈𝐍</label>
-    <input type="number" id="playerInput" min="1" value="1">
+    <select id="playerInput">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
     <button onclick="tambahData()">𝐓𝐚𝐦𝐛𝐚𝐡</button>
     <button class="reset-btn" onclick="resetAll()">𝐑𝐄𝐒𝐄𝐓 𝐀𝐋𝐋</button>
   </div>
