@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>𝐏𝐄𝐁𝐄𝐋𝐈𝐀𝐑 𝐓𝐀𝐍𝐆𝐆𝐔𝐇 𝐋𝐗𝐆𝐑𝐎𝐔𝐏</title>
+
+<style>
+body { 
+    font-family: 'Arial', sans-serif; 
+    background-image: url('https://i.postimg.cc/hPyq0nwG/Screenshot-6.png'); 
+    color: #fff; 
+    margin: 0; 
+    padding: 20px; 
+}
+h2 { 
+    text-align: center; 
+    color: #00eaff; 
+    text-shadow: 0 0 12px #00eaff; 
+    margin-bottom: 20px;
+}
+
+/* LOGIN CARD */
+#loginSection { 
+    width: 100%; 
+    max-width: 400px; 
+    margin: 60px auto; 
+    padding: 25px; 
+    border-radius: 20px; 
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 0 25px #00eaff;
+    text-align: center;
+}
+#loginSection input {
+    width: 100%; padding: 14px; margin-top: 12px; border-radius: 12px;
+    border: none; background: #111827; color: #00eaff;
+}
+#loginSection input:focus { background: #1a2138; outline: none; }
+#loginSection button {
+    width: 100%; padding: 14px; margin-top: 18px; border-radius: 12px; 
+    border: none; background: linear-gradient(90deg, #00eaff, #00c0e0); 
+    font-weight: bold; cursor: pointer; color: #000;
+}
+#loginSection button:hover { background: linear-gradient(90deg, #00c0e0, #00eaff); }
+
+#logoutBtn {
+    width: 160px; padding: 12px; background:red; color:white; border:none;
+    margin: 20px auto; display:block; border-radius:15px; cursor:pointer;
+}
+
+/* SCROLLING TEXT */
+.scrolling-text { 
+    white-space: nowrap; overflow: hidden; margin-bottom: 20px; 
+}
+.scrolling-text p { 
+    display: inline-block; animation: scroll-left 15s linear infinite; 
+    font-size: 18px; color: #00eaff; 
+}
+@keyframes scroll-left { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+/* MAIN WRAPPER */
+.main-wrapper { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+}
+
+/* CONTAINER & SIDE CARDS */
+.container, .side-card { 
+    background: rgba(255,255,255,0.05); 
+    padding: 22px; 
+    border-radius: 20px; 
+    box-shadow: 0 0 20px rgba(0,234,255,0.4); 
+}
+.container { flex: 2 1 500px; min-width: 300px; }
+.side-card { flex: 1 1 220px; min-width: 220px; max-width: 300px; }
+
+/* INPUTS & BUTTONS */
+input, select { 
+    width: 100%; padding: 14px; margin: 8px 0 15px; border-radius: 12px; 
+    border: none; background: #111827; color: #00eaff; 
+}
+input:focus, select:focus { background: #1a2138; outline: none; }
+
+button { 
+    width: 100%; padding: 14px; border-radius: 15px; 
+    border: none; font-weight: bold; cursor: pointer; margin-bottom: 12px; 
+    background: linear-gradient(90deg, #00eaff, #00c0e0); color: #000; 
+}
+button:hover { background: linear-gradient(90deg, #00c0e0, #00eaff); }
+
+/* RESET BUTTON */
+button.reset-btn { background: linear-gradient(90deg, #ff4d4d, #ff1a1a); color:white; }
+button.reset-btn:hover { background: linear-gradient(90deg, #ff1a1a, #ff4d4d); }
+
+/* TABLE */
+table { 
+    width: 100%; margin-top: 20px; border-collapse: collapse; 
+    background: rgba(0,0,0,0.3); border-radius: 12px; overflow: hidden;
+}
+table, th, td { border: 1px solid #00eaff; }
+th, td { padding: 12px; text-align: center; }
+
+/* SUMMARY */
+.summary { 
+    margin-top: 25px; padding: 18px; border-radius: 15px; 
+    background: rgba(0,0,0,0.3); border: 1px solid #00eaff; 
+}
+.summary h3 { text-align: center; color: #00eaff; margin-bottom: 15px; }
+.summary p span { text-decoration: underline; cursor: pointer; color: #00ffea; }
+
+/* MODAL */
+.modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; 
+    width: 100%; height: 100%; background: rgba(224, 24, 24, 0.85); }
+.modal-content { 
+    background: #111827; margin: 15% auto; padding: 25px; border: 2px solid #00eaff; 
+    width: 90%; max-width: 360px; border-radius: 20px; color: #00eaff; text-align: center; 
+}
+.close { color: #00eaff; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+.close:hover { color: #fff; }
+
+/* RANKING COLORS */
+.rank-gold { color: gold; font-weight: bold; text-shadow: 0 0 12px gold, 0 0 25px gold; }
+.rank-silver { color: silver; font-weight: bold; text-shadow: 0 0 12px silver; }
+.rank-bronze { color: #cd7f32; font-weight: bold; text-shadow: 0 0 12px #cd7f32; }
+
+/* RESPONSIVE */
+@media(max-width: 768px) { 
+    .main-wrapper { flex-direction: column; gap: 15px; }
+    #loginSection { margin: 40px 15px; padding: 20px; }
+    .container, .side-card { width: 100%; max-width: 100%; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="loginSection">
+  <h2>Login Admin</h2>
+  <input id="loginEmail" type="email" placeholder="Email Admin">
+  <input id="loginPassword" type="password" placeholder="Password">
+  <button onclick="login()">LOGIN</button>
+</div>
+
+<button id="logoutBtn" onclick="logout()" style="display:none;">LOGOUT</button>
+
+<div id="appContent" style="display:none;">
+
+<h2>𝐏𝐄𝐁𝐄𝐋𝐈𝐀𝐑 𝐓𝐀𝐍𝐆𝐆𝐔𝐇 𝐋𝐗𝐆𝐑𝐎𝐔𝐏</h2>
+
+<div class="scrolling-text">
+<p>𝐊𝐚𝐥𝐚𝐮 𝐦𝐞𝐧𝐚𝐧𝐠 𝐤𝐚𝐭𝐚𝐤𝐚𝐧 𝐦𝐞𝐧𝐚𝐧𝐠. 𝐊𝐚𝐥𝐚𝐮 𝐤𝐚𝐥𝐚𝐡 𝐤𝐚𝐭𝐚𝐤𝐚𝐧 𝐤𝐚𝐥𝐚𝐡 𝐃𝐎𝐍𝐓𝐒 𝐅𝐀𝐋𝐒𝐄 𝐌𝐎𝐃𝐄𝐒𝐓𝐘.</p>
+</div>
+
+<!-- FORM + RANKING -->
+<div class="main-wrapper">
+
+  <div class="container">
+    <label>𝐍𝐀𝐌𝐀</label>
+    <input type="text" id="namaInput">
+    <label>𝐖𝐈𝐍/𝐋𝐎𝐒𝐄</label>
+    <select id="statusInput">
+      <option value="win">WIN</option>
+      <option value="lose">LOSE</option>
+    </select>
+    <label>𝐉𝐔𝐌𝐋𝐀𝐇 𝐁𝐄𝐓</label>
+    <select id="betInput">
+      <option value="2000">2.000</option>
+      <option value="3000">3.000</option>
+      <option value="5000">5.000</option>
+      <option value="10000">10.000</option>
+    </select>
+    <label>𝐉𝐔𝐌𝐋𝐀𝐇 𝐏𝐄𝐌𝐀𝐈𝐍</label>
+    <input type="number" id="playerInput" min="1" value="1">
+    <button onclick="tambahData()">𝐓𝐚𝐦𝐛𝐚𝐡</button>
+    <button class="reset-btn" onclick="resetAll()">𝐑𝐄𝐒𝐄𝐓 𝐀𝐋𝐋</button>
+  </div>
+
+  <!-- RANKING CARD -->
+  <div class="side-card" id="rankingCard">
+    <h3 style="text-align:center; color:#00eaff;">𝐑𝐀𝐍𝐊𝐈𝐍𝐆</h3>
+    <div id="rankingList" style="font-size:15px; line-height:1.6;"></div>
+  </div>
+
+</div>
+
+<!-- TIMER + TOTAL -->
+<div class="main-wrapper" style="margin-top:20px;">
+
+  <div class="side-card">
+    <h3 style="text-align:center; color:#00eaff;">𝐓𝐈𝐌𝐄𝐑</h3>
+    <p id="timerDisplay" style="font-size:15px;text-align:center;">00:00:00</p>
+    <button onclick="startTimer()">𝐌𝐮𝐥𝐚𝐢</button>
+    <button class="reset-btn" onclick="stopTimer()">𝐒𝐭𝐨𝐩</button>
+  </div>
+
+  <div class="side-card">
+    <h3 style="text-align:center; color:#00eaff;">𝐓𝐎𝐓𝐀𝐋 𝐏𝐄𝐑𝐓𝐀𝐍𝐃𝐈𝐍𝐆𝐀𝐍</h3>
+    <p id="totalMatchCount" style="font-size:15px;text-align:center;font-weight:bold;color:#00eaff;">0</p>
+  </div>
+
+</div>
+
+<!-- RINCIAN PEMAIN -->
+<div class="main-wrapper" style="margin-top:20px;">
+
+  <div class="container">
+    <div class="summary" id="summaryList"><h3>𝐑𝐀𝐍𝐆𝐊𝐔𝐌𝐀𝐍</h3></div>
+    <h2>𝐑𝐈𝐍𝐂𝐈𝐀𝐍 𝐏𝐄𝐌𝐀𝐈𝐍</h2>
+    <table id="tabelData">
+      <thead><tr><th>𝐍𝐚𝐦𝐚</th><th>𝐒𝐭𝐚𝐭𝐮𝐬</th><th>𝐉𝐮𝐦𝐥𝐚𝐡 𝐁𝐞𝐭</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modalName"></h3>
+    <p id="modalWin"></p>
+    <p id="modalLose"></p>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+// ==== Firebase Config ====
+const firebaseConfig = {
+apiKey: "AIzaSyBUaxogKMuYoweg45OIKcblH88arE_9HeQ",
+authDomain: "pebeliartangguh.firebaseapp.com",
+databaseURL: "https://pebeliartangguh-default-rtdb.firebaseio.com",
+projectId: "pebeliartangguh",
+storageBucket: "pebeliartangguh.firebasestorage.app",
+messagingSenderId: "909335670060",
+appId: "1:909335670060:web:739862acc9534f356ad089"
+};
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.database();
+const auth = firebase.auth();
+
+const namaInput = document.getElementById("namaInput");
+const statusInput = document.getElementById("statusInput");
+const betInput = document.getElementById("betInput");
+const playerInput = document.getElementById("playerInput");
+const summaryList = document.getElementById("summaryList");
+
+let dataList = [];
+let lastChampion = "";
+let timerInterval;
+let seconds = 0;
+
+function login(){
+  const email = document.getElementById("loginEmail").value;
+  const pass  = document.getElementById("loginPassword").value;
+  auth.signInWithEmailAndPassword(email, pass)
+    .then(()=>{ document.getElementById("loginSection").style.display="none"; document.getElementById("appContent").style.display="block"; document.getElementById("logoutBtn").style.display="block"; })
+    .catch(e=>alert("Login gagal: " + e.message));
+}
+function logout(){ auth.signOut(); location.reload(); }
+auth.onAuthStateChanged(user=>{
+  if(user){ document.getElementById("loginSection").style.display="none"; document.getElementById("appContent").style.display="block"; document.getElementById("logoutBtn").style.display="block"; } 
+  else { document.getElementById("loginSection").style.display="block"; document.getElementById("appContent").style.display="none"; document.getElementById("logoutBtn").style.display="none"; }
+});
+
+db.ref("betData").on("value", snap => { dataList = snap.val() || []; updateTable(); updateSummary(); updateMatchCount(); updateRanking(); });
+
+function tambahData(){
+  if(!auth.currentUser) return alert("Login dulu!");
+  const nama = namaInput.value.trim(); const status = statusInput.value;
+  const bet = parseInt(betInput.value); const player = parseInt(playerInput.value);
+  if(!nama) return alert("Nama harus diisi!"); if(player<1) return alert("Minimal 1 pemain");
+  const totalBet = status==="win" ? bet*player : bet;
+  dataList.push({nama,status,bet:totalBet}); db.ref("betData").set(dataList);
+  namaInput.value=""; playerInput.value=1;
+}
+function resetAll(){ if(!auth.currentUser) return alert("Login dulu!"); if(confirm("Hapus semua data?")) db.ref("betData").set([]); }
+
+function updateTable(){ const tbody=document.querySelector("#tabelData tbody"); tbody.innerHTML=""; dataList.forEach(d=>{ if(d.nama){ const row=`<tr><td>${d.nama}</td><td>${d.status}</td><td>${d.bet.toLocaleString()}</td></tr>`; tbody.innerHTML+=row; } }); }
+
+function updateSummary(){ const sum={}; dataList.forEach(d=>{ if(!sum[d.nama]) sum[d.nama]={win:0,lose:0}; sum[d.nama][d.status]+=d.bet; });
+summaryList.innerHTML="<h3>Rangkuman</h3>";
+Object.keys(sum).forEach(n=>{ const bersih=sum[n].win-sum[n].lose; summaryList.innerHTML+=`<p><span onclick="showModal('${n}')"><b>${n}</b></span><br>Win: ${sum[n].win.toLocaleString()}<br>Lose: ${sum[n].lose.toLocaleString()}<br><b>Total Bersih: ${bersih.toLocaleString()}</b></p>`; });
+}
+
+function updateMatchCount(){ let total=0; dataList.forEach(d=>{ if(d.status==="win") total++; }); document.getElementById("totalMatchCount").innerText=total; }
+
+function updateRanking(){ const sum={}; dataList.forEach(d=>{ if(!sum[d.nama]) sum[d.nama]={win:0,lose:0}; sum[d.nama][d.status]+=d.bet; });
+const rankingArray=Object.keys(sum).map(n=>({nama:n,bersih:sum[n].win-sum[n].lose}));
+rankingArray.sort((a,b)=>b.bersih-a.bersih);
+const rankingList=document.getElementById("rankingList"); rankingList.innerHTML="";
+if(rankingArray.length>0){ const currentChampion=rankingArray[0].nama; if(currentChampion!==lastChampion && lastChampion!==""){ confetti({particleCount:300, spread:150, startVelocity:40, origin:{y:0.6}}); } lastChampion=currentChampion; }
+rankingArray.forEach((p,i)=>{ let medal="",cls=""; if(i===0){medal="🥇";cls="rank-gold";} else if(i===1){medal="🥈";cls="rank-silver";} else if(i===2){medal="🥉";cls="rank-bronze";}
+rankingList.innerHTML+=`<p class="${cls}">${medal} <b>${p.nama}</b> WIN ${p.bersih.toLocaleString()}</p>`; });
+}
+
+const modal=document.getElementById("myModal"); const modalName=document.getElementById("modalName"); const modalWin=document.getElementById("modalWin"); const modalLose=document.getElementById("modalLose");
+function showModal(name){ const sum={win:0,lose:0}; dataList.forEach(d=>{ if(d.nama===name) sum[d.status]+=d.bet; }); modalName.innerText=name; modalWin.innerText="Win: "+sum.win.toLocaleString(); modalLose.innerText="Lose: "+sum.lose.toLocaleString(); modal.style.display="block"; }
+function closeModal(){ modal.style.display="none"; }
+window.onclick=function(e){ if(e.target==modal) modal.style.display="none"; }
+
+function startTimer(){ if(timerInterval) clearInterval(timerInterval); timerInterval=setInterval(()=>{ seconds++; const h=String(Math.floor(seconds/3600)).padStart(2,'0'); const m=String(Math.floor((seconds%3600)/60)).padStart(2,'0'); const s=String(seconds%60).padStart(2,'0'); document.getElementById("timerDisplay").innerText=`${h}:${m}:${s}`; },1000); }
+function stopTimer(){ clearInterval(timerInterval); }
+
+</script>
+</body>
+</html>
