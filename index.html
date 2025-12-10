@@ -8,14 +8,14 @@
 <style>
 body { 
     font-family: 'Arial', sans-serif; 
-    background #000000; 
-    color: #fff; 
+    background: #6303fd; 
+    color: #f4f5fa; 
     margin: 0; 
     padding: 20px; 
 }
 h2 { 
     text-align: center; 
-    color: #FF0000; 
+    color: #26f8ed; 
     text-shadow: 0 0 12px #00eaff; 
     margin-bottom: 20px;
 }
@@ -27,19 +27,19 @@ h2 {
     margin: 60px auto; 
     padding: 25px; 
     border-radius: 20px; 
-    background: rgba(3, 217, 3, 0.05);
+    background: rgba(250, 251, 250, 0.05);
     box-shadow: 0 0 25px #e505c7;
     text-align: center;
 }
 #loginSection input {
     width: 100%; padding: 14px; margin-top: 12px; border-radius: 12px;
-    border: none; background: #111827; color: #00eaff;
+    border: none; background: #2b64e0; color: #00eaff;
 }
-#loginSection input:focus { background: #1a2138; outline: none; }
+#loginSection input:focus { background: #7692ef; outline: none; }
 #loginSection button {
     width: 100%; padding: 14px; margin-top: 18px; border-radius: 12px; 
     border: none; background: linear-gradient(90deg, #00eaff, #00c0e0); 
-    font-weight: bold; cursor: pointer; color: #000;
+    font-weight: bold; cursor: pointer; color: #80e8f3;
 }
 #loginSection button:hover { background: linear-gradient(90deg, #00c0e0, #00eaff); }
 
@@ -68,10 +68,10 @@ h2 {
 
 /* CONTAINER & SIDE CARDS */
 .container, .side-card { 
-    background: rgba(1, 24, 26, 0.4); 
+    background: rgba(6, 235, 52, 0.4); 
     padding: 22px; 
     border-radius: 20px; 
-    box-shadow: 0 0 20px rgba(0,234,255,0.4); 
+    box-shadow: 0 0 20px rgba(243, 237, 237, 0.4); 
 }
 .container { flex: 2 1 500px; min-width: 300px; }
 .side-card { flex: 1 1 220px; min-width: 220px; max-width: 300px; }
@@ -86,7 +86,7 @@ input:focus, select:focus { background: #1a2138; outline: none; }
 button { 
     width: 100%; padding: 14px; border-radius: 15px; 
     border: none; font-weight: bold; cursor: pointer; margin-bottom: 12px; 
-    background: linear-gradient(90deg, #00eaff, #00c0e0); color: #000; 
+    background: linear-gradient(90deg, #00eaff, #00c0e0); color: #38d0ea; 
 }
 button:hover { background: linear-gradient(90deg, #00c0e0, #00eaff); }
 
@@ -97,7 +97,7 @@ button.reset-btn:hover { background: linear-gradient(90deg, #ff1a1a, #ff4d4d); }
 /* TABLE */
 table { 
     width: 100%; margin-top: 20px; border-collapse: collapse; 
-    background: rgba(0,0,0,0.3); border-radius: 12px; overflow: hidden;
+    background: rgba(0, 0, 0, 0.3); border-radius: 12px; overflow: hidden;
 }
 table, th, td { border: 1px solid #00eaff; }
 th, td { padding: 12px; text-align: center; }
@@ -105,7 +105,7 @@ th, td { padding: 12px; text-align: center; }
 /* SUMMARY */
 .summary { 
     margin-top: 25px; padding: 18px; border-radius: 15px; 
-    background: rgba(0,0,0,0.3); border: 1px solid #00eaff; 
+    background: rgba(232, 7, 7, 0.3); border: 1px solid #00eaff; 
 }
 .summary h3 { text-align: center; color: #00eaff; margin-bottom: 15px; }
 .summary p span { text-decoration: underline; cursor: pointer; color: #00ffea; }
@@ -114,10 +114,10 @@ th, td { padding: 12px; text-align: center; }
 .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; 
     width: 100%; height: 100%; background: rgba(224, 24, 24, 0.85); }
 .modal-content { 
-    background: #111827; margin: 15% auto; padding: 25px; border: 2px solid #00eaff; 
+    background: #0ae42f; margin: 15% auto; padding: 25px; border: 2px solid #00eaff; 
     width: 90%; max-width: 360px; border-radius: 20px; color: #00eaff; text-align: center; 
 }
-.close { color: #00eaff; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+.close { color: #0c36f3; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
 .close:hover { color: #fff; }
 
 /* RANKING COLORS */
